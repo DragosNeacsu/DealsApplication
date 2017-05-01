@@ -1,7 +1,7 @@
 # DealsApplication
 
-install dependencies (karma, jasmine, etc):
 > cd BroadBands/Content/
+install dependencies (karma, jasmine, etc):
 > npm install
 
 run tests:
