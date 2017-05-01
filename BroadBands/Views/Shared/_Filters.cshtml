@@ -1,0 +1,35 @@
+﻿<section id="filters" ng-show="!isFilterDisplayed">
+    <ul class="filter">
+        <li>
+            <input id="broadband" type="checkbox" ng-model="filters.type['Broadband']" />
+            <label for="broadband">BroadBand</label>
+        </li>
+        <li>
+            <input id="tv" type="checkbox" ng-model="filters.type['TV']" />
+            <label for="tv">Tv</label>
+        </li>
+        <li>
+            <input id="mobile" type="checkbox" ng-model="filters.type['Mobile']" />
+            <label for="mobile">Mobile</label>
+        </li>
+    </ul>
+
+    <div class="filter">
+        <label>Speed</label>
+        <select ng-model="filters.speed">
+            <option value="" selected>Any</option>
+            <option value="17">17MB</option>
+            <option value="52">52MB</option>
+            <option value="76">76MB</option>
+        </select>
+    </div>
+    <div class="filter">
+        <label>Mobile Option</label>
+        <select ng-model="filters.mobile">
+            <option value="" selected>Any</option>
+            <option value="1 GB">Mobile Data 1GB</option>
+            <option value="2 GB">Mobile Data 2GB</option>
+            <option value="5 GB">Mobile Data 5GB</option>
+        </select>
+    </div>
+</section>

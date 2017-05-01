@@ -1,0 +1,36 @@
+﻿<section id="grid">
+    <div class="grid">
+        <div class="line deal-header">
+            <div class="col col-3">About</div>
+            <div class="col col-2">contract length</div>
+            <div class="col col-1">speed/ usage</div>
+            <div class="col col-1">Offer</div>
+            <div class="col col-1">TV</div>
+            <div class="col col-1">Mobile</div>
+            <div class="col col-1">Cost</div>
+        </div>
+        <div class="line clear" ng-repeat="deal in deals
+                | filter : typeFilter
+                | filter : { speed : { label : filters.speed } }
+                | filter : mobileFilter">
+            <div class="col col-3">{{deal.title}}</div>
+            <div class="col col-2">{{deal.contractLength}}months</div>
+            <div class="col col-1">{{deal.speed.label}} MB </br>{{deal.usage.label}}</div>
+            <div class="col col-1"><img src="{{deal.offer.smallLogo}}" alt="{{deal.offer.title}}" /></div>
+            <div class="col col-1">
+                <span ng-if="!deal.popularChannels.length">N/A</span>
+                <img src="{{channel.logo}}" ng-repeat="channel in deal.popularChannels" alt="{{channel.name}}" />
+            </div>
+            <div class="col col-1">
+                <span ng-if="!deal.mobile">N/A</span>
+                <div ng-if="deal.mobile">
+                    <p>Data: {{deal.mobile.data.label}}</p>
+                    <p>Minutes: {{deal.mobile.minutes.label}}</p>
+                    <p>Texts: {{deal.mobile.texts.label}}</p>
+                    <p>Connection: {{deal.mobile.connectionType.label}}</p>
+                </div>
+            </div>
+            <div class="col col-1">{{deal.prices[0].totalContractCost}}</div>
+        </div>
+    </div>
+</section>

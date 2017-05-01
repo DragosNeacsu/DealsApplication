@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decision Tech test</title>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/bundles/style")
+    @Scripts.Render("~/bundles/angularjs")
+</head>
+<body ng-app="bundlesApp">
+
+
+
+    <header>
+        <div class="container">
+            <img id="logo" src="@ViewBag.Logo" alt="logo" />
+            <img id="burger" ng-click="isFilterDisplayed = !isFilterDisplayed" src="~/Content/burgermenu.svg" alt="burger" />
+        </div>
+    </header>
+    <div class="content container" ng-controller="dealsCtrl" ng-init="init()">
+        @Html.Partial("_Filters")
+        @Html.Partial("_Grid")
+        <div class="clear"></div>
+    </div>
+    @Scripts.Render("~/bundles/myApp")
+</body>
+</html>

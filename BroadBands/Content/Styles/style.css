@@ -1,0 +1,174 @@
+﻿html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, section {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+header {
+    background-color: #dedede;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+#logo {
+    height: 100px
+}
+
+#burger {
+    float: right;
+    display: none;
+}
+
+.content {
+    height: calc(100% - 100px);
+}
+
+
+#filters {
+    background-color: #dedede;
+    float: left;
+    padding: 15px;
+    width: 200px;
+}
+
+.filter select {
+    display: block;
+}
+
+#grid {
+    float: left;
+    width: calc(100% - 200px);
+}
+
+.deal-header {
+    font-weight: bold;
+}
+
+
+/* Grid */
+.grid {
+    overflow: hidden;
+}
+
+    .grid .col {
+        display: inline-block;
+        font-size: 14px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .grid .line {
+        font-size: 0;
+        margin: 10px 0;
+    }
+
+    .grid .col-1 {
+        width: 10%;
+    }
+
+    .grid .col-2 {
+        width: 20%;
+    }
+
+    .grid .col-3 {
+        width: 30%;
+    }
+
+    .grid .col-4 {
+        width: 40%;
+    }
+
+
+@media (max-width: 800px) {
+    #burger {
+        display: block;
+        margin-top: calc(40px - 18px);
+    }
+
+    #logo {
+        height: 80px;
+    }
+
+    #filters {
+        position: absolute;
+        top: 0;
+        background: #333;
+        color: #ffffff;
+    }
+
+    #grid {
+        width: 100%;
+    }
+
+    .deal-header {
+        display: none;
+    }
+
+    .grid .line {
+        background-color: #eaeaea;
+        margin: 20px;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .grid .col {
+        text-align: left;
+    }
+
+    .grid .col {
+        display: block;
+    }
+
+    .grid .col-1 {
+        width: 100%;
+    }
+
+    .grid .col-2 {
+        width: 100%;
+    }
+
+    .grid .col-3 {
+        width: 100%;
+    }
+
+    .grid .col-4 {
+        width: 100%;
+    }
+}
